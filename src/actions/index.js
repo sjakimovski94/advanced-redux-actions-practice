@@ -3,6 +3,11 @@ export function increaseCounter(){
     type:"INCREASE_COUNTER"
   }
 }
+export function decreaseCounter(){
+  return {
+    type:"DECREASE_COUNTER"
+  }
+}
 
 export function setSpecialText(txt){
   return {
