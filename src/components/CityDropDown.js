@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from "react-redux";
+import {setCurrentCity} from "../actions";
 
 function CityDropDown(props) {
   return (
@@ -22,4 +24,14 @@ function CityDropDown(props) {
       </div>
   );
 }
-export default CityDropDown;
+
+function mapDispatchToProps(dispatch){
+  return {
+   set:function(city){
+     let action = setCurrentCity(city);
+     dispatch(action);
+   }
+  }
+}
+
+export default connect(null,mapDispatchToProps)(CityDropDown);
