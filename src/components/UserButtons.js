@@ -1,4 +1,6 @@
 import React from 'react';
+import { addUser, removeUser } from '../actions';
+import { connect } from 'react-redux';
 
 function UserButtons(props) {
   return (
@@ -28,4 +30,16 @@ function UserButtons(props) {
       </div>
   );
 }
-export default UserButtons;
+
+export default connect(null, function(dispatch){
+  return{
+    add:function(user){
+      debugger;
+      dispatch(addUser(user));
+    },
+    remove:function(user){
+      debugger;
+      dispatch(removeUser(user));
+    }
+  }
+})(UserButtons)
