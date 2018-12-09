@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from "react-redux";
 import {setSpecialText} from "../actions";
 
+
 function SpecialTextBox(props) {
   return (
       <div>
@@ -17,10 +18,11 @@ function SpecialTextBox(props) {
 
 function mapDispatchToProps(dispatch){
   return {
-    set:function(txt){
-      let action = setSpecialText(txt)
-      dispatch(action);
-    }
+   set:function(txt){
+     let action = setSpecialText(txt);
+     dispatch(action);
+   }
   }
 }
-export default (SpecialTextBox);
+
+export default connect(null,mapDispatchToProps)(SpecialTextBox);
