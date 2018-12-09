@@ -32,6 +32,6 @@ function specialText(state = "", action){
 }
 
 const rootReducer = combineReducers({
-  currentCount, users
+  currentCount, users, specialText
  });
  export default rootReducer;
