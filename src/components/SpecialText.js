@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 function SpecialText(props) {
   return (
@@ -7,4 +8,11 @@ function SpecialText(props) {
       </div>
   );
 }
-export default SpecialText;
+
+function mapStateToProps(state){
+  return {
+    text: state.specialText
+  }
+}
+
+export default connect(mapStateToProps)(SpecialText);
