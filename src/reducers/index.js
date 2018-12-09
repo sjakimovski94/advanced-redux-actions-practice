@@ -13,14 +13,16 @@ function currentCount(state=0, action){
 
 function users(state =[], action){
   if(action.type === "ADD_USER"){
-
+    let newUsers = state.map((u)=>u);
+    newUsers.push(action.value);
+    return newUsers;
   }
   if(action.type === "REMOVE_USER"){
-    
+    return state.slice(1);
   }
   return state;
 }
-
+  
 
 function specialText(state = "", action){
   if(action.type === "SET_SPECIAL_TEXT"){
@@ -30,6 +32,6 @@ function specialText(state = "", action){
 }
 
 const rootReducer = combineReducers({
-  currentCount
+  currentCount, users
  });
  export default rootReducer;
