@@ -23,8 +23,26 @@ function Users(props) {
       </div>
   );
 }
+/*
 export default connect(function(state){
   return{
-    users:state.users
+    users:state.users,
   }
 })(Users)
+*/
+function mapStateToProps(state){
+  return {
+    users: state.users
+  }
+}
+
+
+export default connect(mapStateToProps)(Users);
+
+/*export default connect(function(state){
+  return{
+    users:state.searchText
+  }
+})(Users)
+
+*/
