@@ -18,7 +18,7 @@ function CityDropDown(props) {
           <option value="New Olreans">New Olreans</option>
           <option value="Las Vegas">Las Vegas</option>
           <option value="Seattle">Seattle</option>
-          <option value="San Fransisco">San Fransisco</option>
+          <option value="San Fransisco">San Francisco</option>
           <option value="Washington D.C.">Washington D.C.</option>
         </select>
       </div>
